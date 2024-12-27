@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* this one is an alternative to fixed, it remains in the same position until you scroll down and then it sticks around depending on its given configs */
+/* great for navbars and other elements you want to stick around the viewport */
+.primary-header {
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: sticky;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    
+}
+
+.container {
+    padding: 20px;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    background-color: aquamarine;
+    position: static; /* this is the default position of the page, deosnt chacge*/
+}
+
+.parent {
+    position: relative;
+}
+
+.sub {
+    /* relative  movies from the original start to somewhere according to the given values */
+    background-color: blueviolet;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    top: 5px;
+    left: 30px;
+    /* relative is suitable to use when you want to change a single element not the whole layout{advice from pros} */
+}
+
+.example {
+    /* position absolute pulls the element out of the flow and the other element pretends it never exists, so there is no reserved space for absolute positioning */
+    /* but if a parent element is positioned relative, the absolute on a child element operates with in the parent element only */
+    /* its rare to use a absolute positionin without the parent of the elemnt being positioned relative */
+    /* it also shrinks the block to match the size of the content by default */
+    background-color: rebeccapurple;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    position: absolute;
+    
+}
+
+/* fixed positioning, this stays fixed ot the specific pisition even when you scroll down the page */
+/* other content in the page pretends that its not available so yo will have to compasate by positioning other content below the fixed element */
+/* suitable for navbars and back to top buttons because it is fixed to the view port */
+.back-to-top {
+    text-decoration: none;
+    background-color: blue;
+    color: #fff;
+    padding: 10px 10px;
+    position: fixed;
+    top: 750px;
+    margin-left: 400px;
+
+}
+
+
+
