@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    background-color: antiquewhite;
+    /* the rgb takes in thress values, 255 at maxmum or 0  */
+    color: rgb(0, 0, 0); 
+}
+
+/* rgba is rgb but with trasperancy which stretches up to 1 */
+p {
+    /* its transparent blasck { it also use in shadows } */
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* hexidecimal it is same as rgb but coded in letter and numbers, letters adn numbers spaning from 1 to 6 */
+h2 {
+    color: rgba(0, 0, 113, 0.764);
+}

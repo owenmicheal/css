@@ -1,0 +1,53 @@
+/* getting rid of default css styles */
+* {
+    /* this iverides the default settings */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* vh and vw units */
+main {
+    background-color: aqua;
+    /* vw sets conditions for the viewpoint so in this case, the
+    main covers 50% of the viewpoint  */
+    /* a percentage gives the same result as vw and it is considered
+    a better choice for righting css than vw */
+    width: 50vw;
+}
+
+/* units and sizes */
+/* absolute units| the most used and most recomended is px which is equal to a pixel on your screen */
+/* absolute px is not ideal for fonts */
+p {
+   border: 2px dashed red;
+   /* percentage% unit | it relative to the parent, it depend on the available parent's percentage */
+   /* the viewport by default is 100% so and element without a parent will relate to the viewport */
+   width: 50%;
+}
+
+/* rem unit */
+/* this is the font size of the root element and responds according to the size of the screen so its not ststic like px */
+/* rem looks at the root's default which is 16px size so, we always look on modifying from  that */
+h1 {
+    border: 2px dashed red;
+    /* this is 3 times bigger than the default size of the font */
+    font-size: 3rem; 
+    /* em unit below */
+    /* this depends on the rem you have given to your text where 1rem will equal to the rem 
+    you have given to your font, in this case, 3rem = 1em */
+    padding: 1em;
+    /* so 1rem = 16px
+          3rem = 1em
+          1em = 48px which is our padding in this case */
+
+}
+
+/* ch unit measures characters in the word and can be set so that a word doesnt exceeds a given value of
+characters before i overlaps */
+.ch-unit {
+    font-size: 2rem;
+    /* ch unit { it counts to 30 characters then it overlaps } */
+    width: 30ch;
+
+}
