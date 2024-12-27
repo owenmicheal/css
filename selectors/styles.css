@@ -1,0 +1,42 @@
+/* selsectors */
+
+/* usniversal selectors {these select every thing on the page, mostly used to reset css or apply styles for the whole content in the page */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* element selectors {these select the element tags} */
+body {
+    background-color: antiquewhite;
+}
+
+/* we can also group selectors as below */
+
+h2, h5 {
+    color: green;
+}
+
+/* selecting elements with in elements */
+
+p span {
+    text-transform: uppercase;
+    color: brown;
+}
+
+/* class selectors { clsses sre more specific than element selectors and they are the most used selectors} */
+.header {
+    font-size: 45px;
+    color: blue;
+}
+
+/* id selectors { ids are meant to be unique in your html, so its not advisable to use them in css } */
+#last {
+    color: red;
+}
+
+/* NOTE: css i cascading meaning it reads the last styles, if you apply styles to an element twice, it will read the last one
+though, some selectors specifies thsn others meanig that if your apply styles twice using classes and element selectors
+the class style will overide the element selector because css considers it more important */
+
+/* inheritance in css is when a child element uses stlyes applied from the parent element
+e.g, the body selector is an ancestor to all other elements in the document meaning
+they can all eneherit its styles but the universal selector does not inherit but it selects all elements in the document */

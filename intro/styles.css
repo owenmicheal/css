@@ -1,0 +1,13 @@
+/* css rules are selectors, property and property value */
+h1 {
+    font-size: 60px;
+    color: blue;
+}
+
+h5 {
+    color: brown;
+}
+
+p {
+    color: blueviolet;
+}
