@@ -1,0 +1,32 @@
+/* typograpy is the way texts are arranged and presented */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 18%;
+    font-size: 1.8rem;
+}
+
+.para {
+    margin-top: 20px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-align: justify;
+    /* indents the 1st line */
+    text-indent: 2em;
+    /* only accepts numbers it  puts space in lines in sentences */
+    line-height: 1.2;
+    /* puts space in letters in words */
+    letter-spacing: 0.1em;
+    /* adds space among words */
+    word-spacing: 0.5em;
+    /* adds weight to  the letters */
+    font-weight: bold;
+    /* styles the font */
+    font-style: italic;
+    /* sets the font family */
+    font-family: Arial, Helvetica, sans-serif;
+}

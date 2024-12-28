@@ -4,11 +4,26 @@
     box-sizing: border-box;
 }
 
-.header {
-    border: 2px dashed red ;
-    width: 50%;
-    font-size: 3rem;
-    padding: 0.5em;
-    margin: 20px;
+.container {
+    border: 8px double red ;
+    font-size: 1.5rem;
+    margin: 1em;
+    padding: 1em;
+    /* outline is not part of the box model but aligns on top of the border */
+    outline: 5px solid purple;
+    outline-offset: -20px;
 }
+
+.circle {
+    margin: 1.5rem auto;
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    outline: 2px solid red;
+    outline-offset: 0.2rem;
+    border-radius: 50px;
+}
+
+/* in Boxmodel, we have our content and its pading in a box, then the margin separates the content and its pading with the margin which is the outer space of the box */
 
