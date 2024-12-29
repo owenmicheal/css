@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+}
+
+.columns {
+    columns: 4 210px;
+    column-rule: 1px solid whitesmoke;
+    column-gap: 2rem;
+}
+
+.columns p {
+    margin-top: 0;
+}
+
+.columns h2 {
+    margin-top: 0;
+    background-color: antiquewhite;
+    color: #333;
+    padding: 1rem;
+    break-inside: avoid;
+
+}
+
+.columns .quote {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    column-span: all;
+}
