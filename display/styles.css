@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+}
+
+nav {
+    list-style-type: none;
+    padding: 0.6rem;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+li {
+    display: inline-block;
+    margin-inline: 0.3rem;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #d66a6a;
+}
+/* inline display takes effect within the child of the elemnt's content {
+note that margin, height and width do NOT work on inline elemnts unless 
+you declare inline-block property */
+/* the in line block property respects the parent settings and operates within its boundaries
+this ia suitable for styling links into buttons */
+.opposite {
+    display: inline-block;
+    background-color: #d66a6a;
+    margin: 0.5rem 0.4rem; /* this adds margin on all sides respecting the parent element */
+    color: azure; 
+    padding: 1rem;  
+}
+/* block positioning is the default style on elements and it takes up the full width of its container */
+p {
+    background-color: antiquewhite;
+}
+
+

@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('./Screenshot\ 2024-12-28\ at\ 23.48.22.png');
+    color: white;
+}
+
+header {
+    /* apple like style */
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(45px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.416);
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: 100;
+    position: sticky;
+    top: 20px;
+    left: 0;
+    right: 0;
+    
+}
+
+.box {
+    height: 300px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(24px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border: 0.7px solid rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+    position: sticky;
+    top: 20px;
+    left: 140px;
+    right: 0;
+    color: rgba(255, 255, 255, 0.416);
+}
+
+h3 {
+    padding: 20px;
+}
+
+.divider {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.18); /* Light gray for the divider */
+        margin: 0;
+        border: none;
+}
+
+.content {
+    list-style-type: square;
+    font-size: 2rem;
+    margin: 1em 2em 2em 2em;
+}
+
+/* pseudo class {notice it has only one colon} */
+.content li:nth-child(2) {
+    color: red;
+}
+
+/* psuedo element {notice it must have two colonies} */
+::marker {
+    /* this changes the the color of the element of the list maker */
+    color: rgba(255, 255, 255, 0.416);
+}
+
+ul ::marker {
+    content: 'Svg or Icon: ';
+}
+
+
+.divider2 {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.18); /* Light gray for the divider */
+    margin-top: 0px;
+    border: none;
+    position: absolute;
+    top: 260px;
+    left: 0;
+    right: 0;
+}
+
+
+main {
+    padding: 5% 10%;
+}
+
+/* all the styles apper the same to unordered list */
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul {
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside;
+    color: tomato;
+}
+ 

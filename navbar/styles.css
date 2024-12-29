@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    /* apple like style */
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: aliceblue;
+    padding: 15px;
+    border-radius: 30px;
+    position: sticky;
+    top: 20px;
+    left: 0;
+    right: 0;
+    
+}
+
+.logo {
+    font-weight: bolder;
+    color: red;
+    position: absolute;
+    top: 11px;
+    left: 12px;
+}
+
+nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
