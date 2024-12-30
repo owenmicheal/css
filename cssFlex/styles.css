@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex; /* Enable Flexbox */
+    flex-wrap: wrap; /* Allow wrapping of items if they don't fit in a single line */
+    justify-content: space-evenly; /* Distribute space evenly */
+    border: 2px solid #ccc;
+    padding: 1rem;
+    max-width: 800px;
+    background-color: #ffffff;
+    gap: 1rem; /* Add space between items */
+
+}
+
+.container div {
+    flex: 1 1 120px; /* Flexible width, with a minimum of 120px */
+    display: flex; /* Apply Flexbox to child divs */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    height: 100px; /* Set a fixed height for items */
+    background-color: #007BFF; /* Background color */
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.container div:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    background-color: #0056b3;
+}
