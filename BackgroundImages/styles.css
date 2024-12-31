@@ -1,0 +1,101 @@
+/* begin reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+/* end reset */
+
+/* utility classes */
+.nowrap {
+    white-space: nowrap;
+}
+
+.offscreen {
+    position: absolute;
+    left: -1000000px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    min-height: 100vh;
+    background-color: antiquewhite;
+    background-image: url('./_KJA0792.jpg'), linear-gradient(to left, blue,#fff) ;
+    background-repeat: repeat-y, no-repeat;
+    background-position: bottom center;
+    background-size: 20%, auto;
+}
+
+.container {
+    background-color: antiquewhite;
+    background-image: url('./Premium\ Photo\ |\ Overhead\ shot\ of\ comfortable\ workplace\ with\ notebook\ on\ white\ desk\ background.jpg');
+    background-position: top-roght;
+    background-size: cover;
+
+    
+}
+
+.hero {
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.8rem;
+
+    background: rgba(0, 0, 0, 0.45);
+    
+}
+
+.h1 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.profile-pic {
+    width: 35%;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double rgb(255, 153, 0);
+    box-shadow: 2px 2px 5px #000;
+    border-radius: 50px 0;
+}
+
+/* .example {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    border: 1px solid red;
+}
+
+.example img {
+    width: 20%;
+    height: auto;
+} */
+
+.clip {
+    font-weight: 800;
+    font-size: 15rem;
+    text-align: center;
+    background-image: url('./8DF1CF3F-DA21-4973-9EB1-150C742EB931_1_201_a.jpeg');
+    background-size: cover; /* Ensures the background image covers the text */
+    background-position: center; /* Centers the background image */
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text transparent for the background clip to show */
+    display: inline-block; /* Prevents text alignment issues */
+}
+
+
+
+
+
