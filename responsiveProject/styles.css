@@ -1,0 +1,232 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* utility classes */
+.nowrap {
+    white-space: nowrap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    min-height: 100vh;
+    background-image: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header, footer {
+    position: sticky;
+    background: #000;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header {
+    padding: 0.5rem;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(45px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.6rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.809);
+}
+
+nav a:hover {
+    color: blue;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+
+/* card class */
+.card {
+    margin-top: 2.5rem;
+    background: hsl(240 10% 3.9%);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 120px;
+}
+
+img {
+    border-radius: 2rem 2rem 0 0;
+    margin-bottom: 10px;
+    
+}
+
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.card figcaption {
+    font-weight: bolder;
+    font-size: 1.8rem;
+    margin: 0.7rem;
+    text-align: center;
+
+}
+
+.divider {
+    height: 1px;   
+    background-color:rgba(255, 255, 255, 0.18); /* Divider color */
+    margin: 15px 0;        /* Space above and below */
+    width: 100%;           /* Full width of the container */
+}
+
+.divided {
+    height: 0.7px;   
+    background-color:rgba(255, 255, 255, 0.18);
+    width: 100%;
+}
+
+
+
+footer {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(45px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.2rem;
+    bottom: 0;
+}
+
+/* tailwind media query breakpoints
+sm	640px	Small screens like phones
+md	768px	Medium screens like tablets
+lg	1024px	Large screens like laptops
+xl	1280px	Extra-large screens like desktops
+2xl	1536px	Ultra-wide or high-resolution monitors
+ */
+
+ @media screen and (min-width: 320px) {
+    nav {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+ }
+
+ @media screen and (min-width: 390px) {
+    nav {
+        font-weight: bold;
+        font-size: 1.35rem;
+    }
+ }
+ 
+ @media screen and (min-width: 640px) {
+     main {
+         justify-content: center;
+         flex-flow: row wrap;
+         padding: 1rem;
+        }
+        
+        .card:last-child {
+            order: -1;
+        }
+
+        nav {
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+        
+    }
+    
+    @media screen and (min-width: 768px) {
+        .card:last-child {
+            order: 1;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .card {
+            width: min(100%, 400px);
+        }
+    }
+    
+    @media screen and (min-width: 1280px) {
+        .card {
+            width: min(100%, 390px);
+        }
+        
+        .card:nth-child(2) {
+            order: -1;
+        }
+    }
+    
+    @media screen and (min-width: 1536px) {
+        .card {
+            width: min(100%, 470px);
+        }
+    }
+
+    @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        nav {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .card figcaption {
+            font-size: 1.5rem;
+        }
+
+        main {
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+
+        .card {
+            width: min(calc(33%-0.25px), 200px);
+        }
+    }
+
+    
