@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* A pseudo-class is used to define the special state of an element.
+It targets elements based on their state or other characteristics,
+such as when they are hovered, focused, or even based on their position in the DOM.
+*/
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #007bff;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Pseudo-class to change the color on hover */
+}
+
+nav ul li a:focus {
+    background-color: purple;
+    font-size: 2rem; /* Pseudo-class to change the color on hover */
+}
+
+nav ul li a:active {
+    color: red;
+}
+
+
+
+/* A pseudo-element is used to style a specific part of an element, 
+such as the first letter, line, or content before or after the element. 
+Unlike pseudo-classes, pseudo-elements create a "virtual" element within 
+the targeted element. */
+
+/* Pseudo-Element Examples: Article */
+article h1::before {
+    content: "🌟 "; /* Adds a star emoji before the heading */
+}
+
+article h1::after {
+    content: " 📝"; /* Adds a notepad emoji after the heading */
+}
+
+article p::first-letter {
+    font-weight: bold; /* Bold the first line of every paragraph */
+    color: #007bff;
+    font-size: 2rem;
+}
+
+
+
+
+
+/* Differences Between Pseudo-Classes and Pseudo-Elements
+Aspect |	Pseudo-Class  |	Pseudo-Element
+Definition | Targets the state or characteristics of an element. |	Targets specific parts of an element.
+Syntax	| Uses a single colon : (e.g., :hover). |	Uses double colons :: (e.g., ::before).
+Purpose |	Applies styles based on conditions (e.g., hover, focus). |	Allows styling of parts like ::before, ::after, ::first-letter.
+Example | Use	button:hover {}	| p::first-line {}
+Effect |	Does not create a new element; styles existing elements. | Acts as a "virtual" element for styling.
+ */

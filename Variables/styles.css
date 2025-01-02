@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    /* shadow */
+    --shadow: 0 6px 5px -5px var(--primary);
+    /* font family*/
+    --ff: Arial, Helvetica, sans-serif;
+    /* font size */
+    --big: 2rem;
+    --medium: 1.5rem;
+    --small: 1rem;
+
+    /* color */
+    --bgcolor: radial-gradient(#c1121f, #780000);
+    --primary: #003049;
+    --nav: #669bbc;
+    --text: #fdf0d5;
+    --sq-text: #333;
+
+    /* square */
+    --sqbg: #fdf0d5;
+    --sq-size: max(150px, 20vw);
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bgcolor: #000;
+        --alt-color: #232323;
+        --radial: #343434;
+        --sqbg: #111111;
+        --sq-text: #fdf0d5;
+    }
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff);
+    font-size: var(--medium);
+    background-color: antiquewhite;
+    background: var(--bgcolor);
+    background-repeat: no-repeat;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer, nav {
+    position: sticky;
+    background-color: var(--primary);
+    text-align: center;
+}
+
+header {
+    font-size: var(--big);
+    padding: 0.7rem;
+    top: 0;
+}
+
+nav {
+    background-color: var(--nav);
+    padding: 0.7rem;
+    font-size: var(--medium);
+    box-shadow: var(--shadow);
+    top: 5.9rem;
+}
+
+main {
+   flex-grow: 1; 
+
+   padding: 10px 0;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-flow: row wrap;
+   gap: min(4vw, 1rem);
+}
+
+.square {
+    background-color: var(--sqbg);
+    color: var(--sq-text);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    width: var(--sq-size);
+    height: var(--sq-size);
+    border: 1.3px solid #544b4b; /* Light Gray */
+    display: grid;
+    place-content: center;
+    font-size: var(--big);
+
+}
+
+/* redefining the css varaible */
+.square--highlight {
+    --sqbg: var(--nav);
+}
+
+footer {
+    padding: 0.7rem;
+    font-size: var(--small);
+    bottom: 0;
+}
