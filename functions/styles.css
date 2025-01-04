@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    /* shadow */
+    --shadow: 0 6px 5px -5px var(--primary);
+    /* font family*/
+    --ff: Arial, Helvetica, sans-serif;
+    /* font size */
+    --big: 2rem;
+    --medium: clamp(1.7rem, 3vh, 2.5rem); /* this takes in the minmumu and maxmumam absolute values and a relative 
+    value in between them to adjust according to the screen sixe and it will not grow
+    beyound the maxmum and will not shrink beyond the minimum */
+    --small: min(3rem, 3vh); /* this is a math funtion that alwaysa chooses 
+    the smallest of the 2 values {max will do th opposite} */
+
+    /* color */
+    --bgcolor: radial-gradient(#c1121f, #780000);
+    --primary: #003049;
+    --nav: #669bbc;
+    --text: #fdf0d5;
+    --sq-text: #333;
+    --padding: 0.5em;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bgcolor: #000;
+        --alt-color: #232323;
+        --radial: #343434;
+        --sqbg: #111111;
+        --sq-text: #fdf0d5;
+    }
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff);
+    font-size: var(--medium);
+    background-color: antiquewhite;
+    background: var(--bgcolor);
+    background-repeat: no-repeat;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer, nav {
+    position: sticky;
+    background-color: var(--primary);
+    text-align: center;
+}
+
+header {
+    font-size: var(--big);
+    padding: var(--padding);
+    top: 0;
+}
+
+nav {
+    background-color: var(--nav);
+    padding: var(--padding);
+    font-size: var(--medium);
+    box-shadow: var(--shadow);
+    top: 5.9rem;
+}
+
+main {
+   flex-grow: 1; 
+
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: flex-start;
+   padding: var(--padding);
+}
+
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--medium);
+}
+
+a:any-link {
+    border-radius: 12px;
+    border: 1px solid #669bbc;
+    padding: var(--padding);
+    background-color: #003049;
+    color: #669bbc;
+    text-decoration: none;
+}
+
+a:any-link:hover {
+    /* enhances the brightness of the link */
+    filter: brightness(150%); 
+}
+
+footer {
+    padding: 0.7rem;
+    font-size: var(--small);
+    bottom: 0;
+}
